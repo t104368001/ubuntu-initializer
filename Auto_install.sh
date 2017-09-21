@@ -11,9 +11,10 @@ if [ -f "$filename" ];then #
 			sudo apt-get -y install nvidia-375 #
 			cd ~/Downloads #
 			wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb #
-			wget https://download.sublimetext.com/sublime-text_build-3126_amd64.deb #
+			sudo add-apt-repository ppa:webupd8team/sublime-text-3 #
+			sudo apt-get update #
+			sudo apt-get install sublime-text-installer #
 			sudo dpkg -i google-chrome-stable_current_amd64.deb #
-			sudo dpkg -i sublime-text_build-3126_amd64.deb #
 			echo '1' > ~/Downloads/step.txt #
 			reboot #
 		fi #
