@@ -1,6 +1,6 @@
-#!/bin/bash
-filename=~/Downloads/step.txt
-flag=0
+#!/bin/bash 
+filename=~/Downloads/step.txt #
+flag=0 #
 if [ -f "$filename" ];then #
 	while IFS='' read -r line || [[ -n "$line" ]]; do #
 		if [[ $line == 0 ]]; then #
