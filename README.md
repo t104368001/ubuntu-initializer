@@ -59,16 +59,16 @@ https://developer.nvidia.com/rdp/cudnn-download
 	reboot
 # Initial opencv
 	cd ~
+	mkdir software
+	cd software
 	git clone https://github.com/daveselinger/opencv.git
-	wget -O https://codeload.github.com/opencv/opencv_contrib/zip/3.1.0
-	unzip opencv_contrib.zip
 	cd opencv
 	mkdir build
-	sudo apt-get install cmake-gui
+	sudo apt-get -y install cmake-gui
 	cmake-gui
 select opencv and opencv/build->configure->generate
 
-	cd build
+	cd ~/software/opencv/build
 	cmake ..
 	make -j8
 	sudo make install
