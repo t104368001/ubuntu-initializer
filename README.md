@@ -91,7 +91,7 @@ select opencv and opencv/build->configure->generate
 # Initial tensorflow
 https://www.tensorflow.org/install/install_sources
 	
-	cd ~
+	cd ~/software
 	sudo apt-get install python-pip python-dev build-essential 
 	git clone https://github.com/tensorflow/tensorflow 
 	cd tensorflow
