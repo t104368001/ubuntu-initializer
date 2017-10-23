@@ -62,6 +62,8 @@ if [ -f "$filename" ];then #
 		if [ $line == 4 ]; then #
 			echo "Install opencv" #
 			cd ~ #
+			mkdir software #
+			cd software #
 			git clone https://github.com/daveselinger/opencv.git #
 			cd opencv #
 			mkdir build #
