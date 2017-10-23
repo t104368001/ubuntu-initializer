@@ -74,19 +74,20 @@ select opencv and opencv/build->configure->generate
 	sudo make install
 # Install bazel
 
-	cd ~/Downloads
+	ccd ~/Downloads #
 	echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
 	curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
-	sudo apt-get update && sudo apt-get install bazel
-	sudo apt-get upgrade bazel
-	sudo apt-get install openjdk-8-jdk
-	sudo apt-get install pkg-config zip g++ zlib1g-dev unzip
+	sudo apt-get -y update && sudo apt-get -y install bazel
+	sudo apt-get -y upgrade bazel
+	sudo apt-get -y install openjdk-8-jdk
+	sudo apt-get -y install pkg-config zip g++ zlib1g-dev unzip
 	wget https://github.com/bazelbuild/bazel/releases/download/0.5.0/bazel-0.5.0-installer-linux-x86_64.sh
 	chmod +x bazel-0.5.0-installer-linux-x86_64.sh
 	./bazel-0.5.0-installer-linux-x86_64.sh --user
 	echo "export PATH=\"$PATH:$HOME/bin\"" >> ~/.bashrc
-	sudo apt-get install python-numpy python-dev python-pip python-wheel
-	sudo apt-get install libcupti-dev 
+	source ~/.bashrc
+	sudo apt-get -y install python-numpy python-dev python-pip python-wheel
+	sudo apt-get -y install libcupti-dev
 # Initial tensorflow
 https://www.tensorflow.org/install/install_sources
 	
