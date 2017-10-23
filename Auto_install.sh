@@ -99,7 +99,7 @@ if [ -f "$filename" ];then #
 		fi #
 		if [ $line == 6 ]; then #
 			echo "Install tensorflow" #
-			cd ~ #
+			cd ~/software #
 			sudo apt-get -y install python-pip python-dev build-essential #
 			git clone https://github.com/tensorflow/tensorflow #
 			flag=1 #
@@ -110,7 +110,7 @@ if [ -f "$filename" ];then #
 		fi #
 	done < "$filename" #
 	if [ $flag = 1 ]; then #
-		cd ~/tensorflow #
+		cd ~/software/tensorflow #
 		./configure #
 		bazel build --config=opt --config=cuda //tensorflow/tools/pip_package:build_pip_package #
 		bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg #
