@@ -73,7 +73,7 @@ if [ -f "$filename" ];then #
 			echo "Step 3 : Press generate" #
 			echo "Step 4 : Exit and run \"Auto_install.sh\" again" #
 			cmake-gui #
-			cd ~/opencv/build #
+			cd ~/software/opencv/build #
 			cmake .. #
 			make -j8 #
 			sudo make install #
